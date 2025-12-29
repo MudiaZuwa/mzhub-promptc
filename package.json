@@ -1,0 +1,62 @@
+{
+  "name": "@mzhub/promptc",
+  "version": "0.1.1",
+  "description": "Compile and optimize LLM prompts in JavaScript using type-safe schemas and examples.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "promptc": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "vitest"
+  },
+  "keywords": [
+    "llm",
+    "prompt",
+    "compiler",
+    "dspy",
+    "openai",
+    "anthropic",
+    "ai"
+  ],
+  "author": "MZ Hub",
+  "license": "MIT",
+  "dependencies": {
+    "zod": "^3.24.0",
+    "p-limit": "^6.1.0"
+  },
+  "peerDependencies": {
+    "openai": "^4.0.0",
+    "@anthropic-ai/sdk": "^0.30.0",
+    "@google/generative-ai": "^0.21.0",
+    "ollama": "^0.5.0"
+  },
+  "peerDependenciesMeta": {
+    "openai": {
+      "optional": true
+    },
+    "@anthropic-ai/sdk": {
+      "optional": true
+    },
+    "@google/generative-ai": {
+      "optional": true
+    },
+    "ollama": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0",
+    "@types/node": "^22.0.0",
+    "vitest": "^2.0.0"
+  }
+}
