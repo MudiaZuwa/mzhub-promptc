@@ -14,10 +14,12 @@ Install your preferred LLM provider (optional peer dependencies):
 
 ```bash
 # Pick one or more
-npm install openai
-npm install @anthropic-ai/sdk
-npm install @google/generative-ai
-npm install ollama
+npm install openai                      # OpenAI
+npm install @anthropic-ai/sdk           # Anthropic (Claude)
+npm install @google/generative-ai       # Google (Gemini)
+npm install groq-sdk                    # Groq (fast inference)
+npm install @cerebras/cerebras_cloud_sdk # Cerebras (fast inference)
+npm install ollama                      # Ollama (local)
 ```
 
 ## Quick Start
@@ -222,4 +224,3 @@ The compiler returns a serializable artifact:
 ## License
 
 MIT
-
